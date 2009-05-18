@@ -11,7 +11,7 @@ echo "You need to be root to run this!"
   exit 2
 fi
 
-apt-get install -y librmagick-ruby libonig-dev libbluecloth-ruby libopenssl-ruby1.8
+apt-get install -y librmagick-ruby libonig-dev libbluecloth-ruby libopenssl-ruby1.8 rubygems
 
 gem install textpow mime-types --no-ri --no-rdoc
 
