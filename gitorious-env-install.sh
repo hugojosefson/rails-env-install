@@ -48,6 +48,8 @@ chown -R git:www-data gitorious
 
 cd gitorious
 
+apt-get install -y rake
+
 sed s/ssssht/`rake -s secret`/ config/gitorious.sample.yml >> config/gitorious.yml
 
 #nano config/gitorious.yml
