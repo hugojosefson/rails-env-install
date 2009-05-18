@@ -114,6 +114,8 @@ chown git:www-data config/database.yml
 
 
 
+sudo apt-get install -y rake
+
 RAILS_ENV=production rake db:migrate
 
 ln -s /srv/gitorious/script/gitorious /bin/gitorious
