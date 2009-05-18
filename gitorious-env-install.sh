@@ -53,16 +53,15 @@ chown -R git:www-data gitorious
 
 cd gitorious
 
-sed s/ssssht/`rake -s secret`/ config/gitorious.sample.yml >> config/gitorious.yml
+sed "s/ssssht/$(rake -s secret)/" config/gitorious.sample.yml >> config/gitorious.yml
 
 #nano config/gitorious.yml
 #repository_base_path: "/srv/git_repositories"
 #gitorious_host: git.livingnet.com.br
-sed s/repository_base_path/#repository_base_path/ config/gitorious.yml >> config/gitorious1.yml
-sed s/gitorious_host/#gitorious_host/ config/gitorious1.yml >> config/gitorious2.yml
-sed s/gitorious_client_port/#gitorious_client_port/ config/gitorious2.yml >> config/gitorious3.yml
-sed s/gitorious_client_host/#gitorious_client_host/ config/gitorious3.yml >> config/gitorious4.yml
-mv config/gitorious4.yml config/gitorious.yml
+sed 's/repository_base_path/#repository_base_path/' -i config/gitorious.yml
+sed 's/gitorious_host/#gitorious_host/' -i config/gitorious.yml
+sed 's/gitorious_client_port/#gitorious_client_port/' -i config/gitorious.yml
+sed 's/gitorious_client_host/#gitorious_client_host/' -i config/gitorious.yml
 #locale: enrepository_base_path: /srv/git_repositories
 echo '===jabuti==='
 echo '' >> config/gitorious.yml
@@ -71,7 +70,6 @@ echo 'repository_base_path: /srv/git_repositories' >> config/gitorious.yml
 echo "gitorious_host: $GITORIOUS_HOST" >> config/gitorious.yml
 echo 'gitorious_client_port: 80' >> config/gitorious.yml
 echo "gitorious_client_host: $GITORIOUS_HOST" >> config/gitorious.yml
-rm config/gitorious1.yml config/gitorious2.yml config/gitorious3.yml
 
 
 
