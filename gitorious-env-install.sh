@@ -32,7 +32,7 @@ apt-get install -y libmagick9-dev
 
 sudo apt-get install -y rake
 
-sudo gem install rack
+sudo gem install rack --no-ri --no-rdoc
 
 
 if [ -d /srv ]
