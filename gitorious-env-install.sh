@@ -92,6 +92,8 @@ gem install rmagick -v2.8.0 --no-ri --no-rdoc
 gem uninstall -v1.2.4 rspec
 gem install diff-lcs --no-ri --no-rdoc
 
+apt-get install -y mysql-server
+
 echo "CREATE DATABASE \`gitorious\` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;" > temp.mysql
 mysql -uroot -p$MYSQL_PASS < temp.mysql
 rm temp.mysql
