@@ -11,12 +11,12 @@ echo "You need to be root to run this!"
   exit 2
 fi
 
-apt-get install -y librmagick-ruby libonig-dev libbluecloth-ruby libopenssl-ruby1.8 rubygems1.8 ruby1.8-dev
+apt-get install -y librmagick-ruby libonig-dev libbluecloth-ruby libopenssl-ruby1.9 rubygems1.9 ruby1.9-dev
 
 gem install textpow mime-types --no-ri --no-rdoc
 
 gem install chronic --no-ri --no-rdoc
-gem install ruby-openid -v2.1.2 --no-ri --no-rdoc
+gem install ruby-openid --no-ri --no-rdoc
 
 gem install ruby-yadis --no-ri --no-rdoc
 
@@ -70,8 +70,7 @@ rm config/gitorious1.yml config/gitorious2.yml config/gitorious3.yml
 
 
 
-gem install hoe -v1.8.2 --no-ri --no-rdoc
-yes | gem uninstall hoe -v1.12.2
+gem install hoe --no-ri --no-rdoc
 ###ruby script
 ###hoe_line=`gem list | grep ^hoe`
 ###hoe_line.chomp!
@@ -81,15 +80,14 @@ yes | gem uninstall hoe -v1.12.2
 ###arr_hoe_versions.each{|d| `/usr/bin/gem uninstall hoe -v#{d}`}
 
 
-gem install geoip -v0.8.0 --no-ri --no-rdoc
-gem install daemons -v1.0.10 --no-ri --no-rdoc
-gem install rspec-rails -v1.1.12 --no-ri --no-rdoc
-gem install echoe -v3.0.2 --no-ri --no-rdoc
-gem install RedCloth -v4.1.1 --no-ri --no-rdoc
-gem install rdiscount -v1.3.1 --no-ri --no-rdoc
-gem install rmagick -v2.8.0 --no-ri --no-rdoc
+gem install geoip --no-ri --no-rdoc
+gem install daemons --no-ri --no-rdoc
+gem install rspec-rails --no-ri --no-rdoc
+gem install echoe --no-ri --no-rdoc
+gem install RedCloth --no-ri --no-rdoc
+gem install rdiscount --no-ri --no-rdoc
+gem install rmagick --no-ri --no-rdoc
 
-gem uninstall -v1.2.4 rspec
 gem install diff-lcs --no-ri --no-rdoc
 
 apt-get install -y mysql-server
