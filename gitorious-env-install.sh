@@ -30,6 +30,11 @@ adduser git --system --disabled-password
 
 apt-get install -y libmagick9-dev
 
+sudo apt-get install -y rake
+
+sudo gem install rack
+
+
 if [ -d /srv ]
 then
    cd /srv
@@ -110,10 +115,6 @@ echo "production:
 
 chown git:www-data config/database.yml
 
-
-
-sudo apt-get install -y rake
-sudo gem install rack
 
 RAILS_ENV=production rake db:migrate
 
