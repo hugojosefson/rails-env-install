@@ -113,6 +113,7 @@ chown git:www-data config/database.yml
 
 
 sudo apt-get install -y rake
+sudo gem install rack
 
 RAILS_ENV=production rake db:migrate
 
